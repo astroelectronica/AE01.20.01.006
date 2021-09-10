@@ -1,0 +1,5 @@
+*load regulation
+.include ../AE01.20.01.006.cir
+.step param RLOAD 1 60 10
+.tran 30u startup
+.backanno

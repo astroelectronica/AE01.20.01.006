@@ -1,0 +1,10 @@
+.title KiCad schematic
+.include "models/FMMT493.spice.txt"
+.include "models/ZR431.spice.txt"
+XU1 /VZ /VREF /OUT ZR431
+Q1 VCC /VZ /VREF FMMT493
+R1 VCC /VZ 7.15k
+R2 /OUT /VREF 49.9
+R3 /OUT 0 {RLOAD}
+V1 VCC 0 7
+.end

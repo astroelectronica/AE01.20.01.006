@@ -1,0 +1,34 @@
+*load regulation
+*
+*Rsense
+.meas V_Rsense_max max V(/vref,/out)
+.meas I_Rsense_max max -I(R2)
+.meas P_Rsense_max param (V_Rsense_max*I_Rsense_max)
+*
+*Rz
+.meas V_Rz_max max V(vcc,/vz)
+.meas I_Rz_max max I(R1)
+.meas P_Rz_max param (V_Rz_max*I_Rz_max)
+*
+*Rload
+.meas V_Rload_max max V(/out)
+.meas I_Rload_max max I(R3)
+.meas P_Rload_max param (V_Rload_max*I_Rload_max)
+*
+*BJT
+.meas Vce_max max V(vcc,/Vref)
+.meas Vbe_max max V(/Vz,/Vref)
+.meas Ic_max max Ic(Q1)
+.meas Ib_max max Ib(Q1)
+.meas gain_max param (Ic_max/Ib_max)
+.meas P_BJT_max param (Vce_max*Ic_max)
+*
+*ZR431
+.meas Vak_max max -V(/out,/vz)
+.meas Iak_max max Ix(u1:1)
+.meas Pak_max param (Vak_max*Iak_max)
+*
+*Source
+.meas V_source_max max V(vcc)
+.meas I_source_max max I(V1)
+.meas P_source_max param (V_source_max*I_source_max)
